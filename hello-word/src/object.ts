@@ -17,7 +17,7 @@ let employee: {
 // class Employee: ...
 // let employee: Employee = {...}
 
-let employee2: {
+let employee_2: {
     readonly id: number,
     name: string
     retire: (date: Date) => void  // set a method

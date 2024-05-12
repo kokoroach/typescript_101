@@ -1,6 +1,6 @@
 "use strict";
 let employee = { id: 1, name: 'Jonel' };
-let employee2 = {
+let employee_2 = {
     id: 1,
     name: 'Jonel',
     retire: (date) => {
