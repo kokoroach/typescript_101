@@ -1,0 +1,6 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.automationProfile.windows": {
+        "path": "C:\\Windows\\System32\\cmd.exe"
+    }
+}
