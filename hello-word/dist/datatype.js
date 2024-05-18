@@ -1,13 +1,13 @@
 "use strict";
 let number = 2;
 let number_typed = 3;
-let string = 'string';
-let string_typed = 'string2';
+let string = "string";
+let string_typed = "string2";
 let any_;
 let any_typed;
 let any_arr = [];
 let any_typed_arr = [];
-let users_typed = [1, 'Jonel'];
+let users_typed = [1, "Jonel"];
 const small = 1;
 const medium = 2;
 const large = 3;

@@ -1,20 +1,20 @@
 "use strict";
 let employee_3 = {
     id: 1,
-    name: 'Jonel',
+    name: "Jonel",
     retire: (date) => {
         console.log(date);
-    }
+    },
 };
 function kgToLbs(weight) {
-    if (typeof weight === 'number')
+    if (typeof weight === "number")
         return weight * 2.2;
     else
         return parseInt(weight) * 2.2;
 }
 let textBox = {
     drag: () => { },
-    resize: () => { }
+    resize: () => { },
 };
 let quantity = 50;
 let quantity_aliased = 50;
@@ -22,7 +22,7 @@ function greet(name) {
     if (name)
         console.log(`Hi ${name}!`);
     else
-        console.log('Hola!');
+        console.log("Hola!");
 }
 function getCustomer(id) {
     return id === 0 ? null : { birthday: new Date() };
@@ -44,5 +44,5 @@ let customers = [
     getCustomerV2(2),
 ];
 let log = null;
-log === null || log === void 0 ? void 0 : log('a');
+log === null || log === void 0 ? void 0 : log("a");
 //# sourceMappingURL=advance_type.js.map
