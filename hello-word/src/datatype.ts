@@ -40,27 +40,27 @@ const large = 3;
 
 // PascalCase
 enum SizeDefault {
-  Small,
-  Medium,
-  Large,
+    Small,
+    Medium,
+    Large,
 } // TS starts as value, 0
 enum SizeOverride {
-  Small = "s",
-  Medium = "m",
-  Large = "l",
+    Small = "s",
+    Medium = "m",
+    Large = "l",
 } // Cast to explicit values
 enum Size {
-  Small = 1,
-  Medium,
-  Large,
+    Small = 1,
+    Medium,
+    Large,
 } //TS implicitly declares the values of that follows
 
 let mySize: Size = Size.Small;
 console.log(mySize); // logs `1`
 
 const enum SizeOptimal {
-  Small = 1,
-  Medium,
-  Large,
+    Small = 1,
+    Medium,
+    Large,
 } // const on enum makes its JS output map more optimized
 let mySizeOptimal: SizeOptimal = SizeOptimal.Small;

@@ -2,26 +2,26 @@
 // type aliases: ~class in Python
 // --------------------
 type Employee = {
-  readonly id: number;
-  name: string;
-  retire: (date: Date) => void;
+    readonly id: number;
+    name: string;
+    retire: (date: Date) => void;
 };
 
 let employee_3: Employee = {
-  id: 1,
-  name: "Jonel",
-  retire: (date: Date) => {
-    console.log(date);
-  },
+    id: 1,
+    name: "Jonel",
+    retire: (date: Date) => {
+        console.log(date);
+    },
 };
 
 // --------------------
 // union type
 // --------------------
 function kgToLbs(weight: number | string): number {
-  // Narrowing
-  if (typeof weight === "number") return weight * 2.2;
-  else return parseInt(weight) * 2.2;
+    // Narrowing
+    if (typeof weight === "number") return weight * 2.2;
+    else return parseInt(weight) * 2.2;
 }
 // kgToLbs(2);
 // kgToLbs('3kg');
@@ -30,18 +30,18 @@ function kgToLbs(weight: number | string): number {
 // intersection type
 // --------------------
 type Draggable = {
-  drag: () => void;
+    drag: () => void;
 };
 
 type Resizeable = {
-  resize: () => void;
+    resize: () => void;
 };
 
 type UIWidget = Draggable & Resizeable;
 
 let textBox: UIWidget = {
-  drag: () => {},
-  resize: () => {},
+    drag: () => {},
+    resize: () => {},
 };
 
 // --------------------
@@ -59,8 +59,8 @@ type Metric = "cm" | "inch";
 // nullable type
 // --------------------
 function greet(name: string | null | undefined): void {
-  if (name) console.log(`Hi ${name}!`);
-  else console.log("Hola!");
+    if (name) console.log(`Hi ${name}!`);
+    else console.log("Hola!");
 }
 // greet(null);
 // greet(undefined);
@@ -73,11 +73,11 @@ function greet(name: string | null | undefined): void {
 // obj.func?.(args)
 
 type Customer = {
-  birthday: Date;
+    birthday: Date;
 };
 
 function getCustomer(id: number): Customer | null {
-  return id === 0 ? null : { birthday: new Date() };
+    return id === 0 ? null : { birthday: new Date() };
 }
 
 let customer = getCustomer(0);
@@ -85,7 +85,7 @@ if (customer !== null) console.log(customer.birthday);
 
 // Assume that this function can also return undefined
 function getCustomer2(id: number): Customer | null | undefined {
-  return id === 0 ? null : { birthday: new Date() };
+    return id === 0 ? null : { birthday: new Date() };
 }
 // Then, we expand the if check
 let customer2 = getCustomer2(1);
@@ -98,11 +98,11 @@ let customer2 = getCustomer2(1);
 // Expand further and make birthday property optional
 
 type CustomerV2 = {
-  birthday?: Date;
+    birthday?: Date;
 };
 
 function getCustomerV2(id: number): CustomerV2 | null | undefined {
-  return id === 0 ? null : { birthday: new Date() };
+    return id === 0 ? null : { birthday: new Date() };
 }
 let customerv2 = getCustomerV2(1);
 // console.log(customerv2?.birthday?.getFullYear());
@@ -110,9 +110,9 @@ let customerv2 = getCustomerV2(1);
 // Optional element access operator
 type NullableCustomer = CustomerV2 | null | undefined;
 let customers: NullableCustomer[] = [
-  getCustomerV2(0),
-  getCustomerV2(1),
-  getCustomerV2(2),
+    getCustomerV2(0),
+    getCustomerV2(1),
+    getCustomerV2(2),
 ];
 // if (customers !== null && customers !== undefined)
 // console.log(customers[0]?.birthday);
